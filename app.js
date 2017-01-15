@@ -20,6 +20,7 @@ app.set('view engine', 'ejs');
 
 mongoose.connect(dburl);
 var db = mongoose.connection;
+var port = process.env.PORT || 3000)
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
@@ -28,7 +29,7 @@ db.once('open', function() {
 });
 
 function init() {
-    app.listen(3000, function() {
+    app.listen(port, function() {
         console.log('node listening on port 3000');
     })
 }
