@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include assets/partials/header %>
+</head>
+
+<body>
+    <div class="container-fluid"></div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h2>Create New Post.</h2>
+
+            <form action="http://localhost:3000/api" method="post" id="new">
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <h4>title:</h4>
+                    <input type="text" name="title" value="">
+                  </div>
+                  <div class="col-md-6 col-md-pull-3">
+                    <h4>author:</h4>
+                    <input type="text" name="author" value="">
+                  </div>
+                </div>
+                <div class="col-md-6 row">
+                  <h4>post:</h4>
+                    <textarea name="body" rows="8" cols="80" form="new"></textarea>
+                    <input type="submit" value="Submit">
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <% include assets/partials/footer %>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+
+.title-box {
+    background-color:#333333;
+    padding: 12px 12px 24px 12px;
+}
+
+.title-box h1 {
+  font-size: 5.5rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.title-box p {
+    margin-bottom: 0;
+    font-size: 1.1em;
+    font-style: italic;
+    color: #FFFFFF;
+}
+
+.intro {
+  text-align: center;
+  background-image: url('/static/images/design-bg.png');
+  height: 10em;
+}
+
+.flex {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.flex img{
+  width: 50rem;
+}
+
+.box {
+  color: white;
+  opacity: 1;
+  transition: 150ms linear;
+}
+
+.box:hover {
+  opacity: 0.5;
+}
+
+.active {
+  width: 100%;
+  height: 40em;
+}

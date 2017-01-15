@@ -1,0 +1,14 @@
+<script>
+  $('.flex div').click(function() {
+    $(this).addClass('active');
+
+    $(this).mouseleave(function(){
+      $(this).removeClass('active');
+      $('.flex div').fadeIn();
+    })
+
+    $('.flex div').filter(function() {
+      return !($(this).is('.active'));
+    }).fadeOut(0);
+  });
+</script>

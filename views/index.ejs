@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include assets/partials/header %>
+    <title>reubensua</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+      <% include assets/partials/nav %>
+
+      <div class="row intro">
+        <p>I am a self taught web-dev, proficient in Java,Groovy and Javascript.</p>
+        <p>You can view my certifications <a href="display">here</a></p>
+      </div>
+        <div class="row flex">
+          <% var count = 0; %>
+            <% postlist.forEach(function(post) { %>
+                <div class="col-md-4 box" id="id-<%- count %>" style="background-color: <%- post.color %>">
+                    <h1><%= post.title %></h1>
+                    <p><%= post.body %></p>
+                </div>
+              <% count++}); %>
+        </div>
+    </div>
+
+    <footer>
+        <% include assets/partials/footer %>
+    </footer>
+</body>
+
+</html>
