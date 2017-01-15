@@ -11,6 +11,10 @@ router.get('/display',function(req,res,next){
     res.render('display')
 });
 
+router.get('/favicon.ico', function(req, res) {
+    res.send(200);
+});
+
 router.get('/', function(req, res, next) {
     res.redirect('/home');
 });
