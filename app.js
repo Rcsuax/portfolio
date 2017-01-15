@@ -20,7 +20,7 @@ app.set('view engine', 'ejs');
 
 mongoose.connect(dburl);
 var db = mongoose.connection;
-var port = process.env.PORT || 3000)
+var port = process.env.PORT || 3000;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
