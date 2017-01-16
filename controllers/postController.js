@@ -17,6 +17,8 @@ router.route('/')
     post.title = req.body.title;
     post.preview = req.body.preview;
     post.body = req.body.body;
+    post.tech = req.body.tech;
+    post.url = req.body.url;
 
     post.save(function(err) {
         if (err) {
@@ -26,7 +28,9 @@ router.route('/')
             message: 'Post created',
             title: req.body.title,
             preview: req.body.preview,
+            tech: req.body.tech,
             body: req.body.body,
+            url: req.body.url,
             date: post.date
         });
     })
