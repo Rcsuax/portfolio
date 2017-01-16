@@ -6,7 +6,7 @@
 
     $(this).mouseleave(function(){
       $(this).removeClass('active');
-      $(this).find('p').addClass('postbody');
+      $(this).find('p:last-child').addClass('postbody');
       $('.flex div').fadeIn();
     })
 
