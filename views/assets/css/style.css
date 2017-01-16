@@ -8,6 +8,13 @@ h1 {
     font-weight: bold;
 }
 
+a:link {
+  color: black;
+}
+a:visited {
+  color: blue;
+}
+
 .title-box {
     background-color:#333333;
     padding: 12px 12px 24px 12px;
