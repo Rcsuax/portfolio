@@ -15,7 +15,7 @@ router.route('/')
 .post(function(req, res) {
     var post = new Post();
     post.title = req.body.title;
-    post.author = req.body.author;
+    post.preview = req.body.preview;
     post.body = req.body.body;
 
     post.save(function(err) {
@@ -25,7 +25,7 @@ router.route('/')
         res.json({
             message: 'Post created',
             title: req.body.title,
-            author: req.body.author,
+            preview: req.body.preview,
             body: req.body.body,
             date: post.date
         });

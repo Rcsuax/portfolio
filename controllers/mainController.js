@@ -12,7 +12,7 @@ router.get('/display',function(req,res,next){
 });
 
 router.get('/favicon.ico', function(req, res) {
-    res.send(200);
+    res.sendStatus(200);
 });
 
 router.get('/', function(req, res, next) {

@@ -19,7 +19,8 @@
             <% postlist.forEach(function(post) { %>
                 <div class="col-md-4 box" id="id-<%- count %>" style="background-color: <%- post.color %>">
                     <h1><%= post.title %></h1>
-                    <p><%= post.body %></p>
+                    <p><%= post.preview %></p>
+                    <p class="postbody"><%= post.body %></p>
                 </div>
               <% count++}); %>
         </div>

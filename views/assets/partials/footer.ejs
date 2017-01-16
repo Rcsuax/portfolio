@@ -1,9 +1,12 @@
 <script>
   $('.flex div').click(function() {
     $(this).addClass('active');
+    $(this).find('p').removeClass('postbody');
+
 
     $(this).mouseleave(function(){
       $(this).removeClass('active');
+      $(this).find('p').addClass('postbody');
       $('.flex div').fadeIn();
     })
 
