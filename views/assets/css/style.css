@@ -60,6 +60,10 @@ a:link {
   filter: brightness(85%);
 }
 
+.box a {
+  color: white;
+}
+
 .active {
   width: 100%;
   height: 40em;
