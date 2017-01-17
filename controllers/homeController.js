@@ -13,7 +13,7 @@ router.get('/',function(req,res){
     posts.forEach(function(post){
       post.color = colorArray[colorPointer];
       colorPointer++;
-      if(colorPointer > posts.length){
+      if(colorPointer >= colorArray.length) {
         colorPointer = 0;
       }
     })
