@@ -15,8 +15,11 @@ app.use(require(__dirname + '/controllers/mainController.js'));
 app.set('view engine', 'ejs');
 
 //Model
-// var dburl = "127.0.0.1:27017/post";
- var dburl = "root:passroot@ds111798.mlab.com:11798/port-api" ;
+function returnDbString(){
+  return process.env.DBUser + ':' + process.env.DBPassword + '@ds111798.mlab.com:11798/port-api'
+}
+
+ var dburl = returnDbString();
 
 mongoose.connect(dburl);
 var db = mongoose.connection;
