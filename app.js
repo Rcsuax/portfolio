@@ -14,11 +14,6 @@ app.use(require(__dirname + '/controllers/mainController.js'));
 //EJSView
 app.set('view engine', 'ejs');
 
-//Model
-function returnDbString(){
-  return process.env.DBUser + ':' + process.env.DBPassword + '@ds111798.mlab.com:11798/port-api'
-}
-
  var dburl = returnDbString();
 
 mongoose.connect(dburl);
@@ -30,6 +25,10 @@ db.once('open', function() {
     console.log('mongo connected:' + dburl);
     init();
 });
+
+function returnDbString(){
+  return process.env.DBUser + ':' + process.env.DBPassword + '@ds111798.mlab.com:11798/port-api'
+}
 
 function init() {
     app.listen(port, function() {
