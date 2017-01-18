@@ -1,12 +1,21 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 2em;
+    font-weight: 600;
 }
 
 h1 {
-    font-family: 'Merriweather', serif;
-    font-weight: bold;
+  font-weight: bold;
 }
+
+h3 {
+  font-weight: normal;
+}
+
+h1, h3 {
+    font-family: 'Merriweather', serif;
+}
+
 
 a:link {
   color: black;
@@ -14,7 +23,7 @@ a:link {
 
 .title-box {
     background-color:#333333;
-    padding: 12px 12px 24px 12px;
+    padding: 25px 12px 25px 12px;
 }
 
 .title-box h1 {
@@ -57,7 +66,7 @@ a:link {
 }
 
 .box:hover {
-  filter: brightness(85%);
+  filter: brightness(125%);
 }
 
 .box a {
