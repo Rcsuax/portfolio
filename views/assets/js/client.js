@@ -2,7 +2,7 @@ function runTyping() {
 		var element = document.querySelector('#output');
 		var typeSpeed = 100; // 80 ms
 		var deleteSpeed = 30; // 30 ms
-		var deleteAfter = 10000000 //1000; // 1 second
+		var deleteAfter = 3000; // 3 seconds
 		var items = [
 		  "I am a self taught developer",
 		  "I code in Java, Groovy and Javascript",
