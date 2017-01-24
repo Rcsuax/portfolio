@@ -12,10 +12,13 @@ h3 {
   font-weight: normal;
 }
 
-h1, h3 {
+h1, h3 , #output {
     font-family: 'Merriweather', serif;
 }
 
+#output {
+  font-size: 2.5em;
+}
 
 a:link {
   color: black;
@@ -27,7 +30,7 @@ a:link {
 }
 
 .title-box h1 {
-  font-size: 5.5rem;
+  font-size: 3em;
   text-align: center;
   color: #FFFFFF;
 }
@@ -43,10 +46,6 @@ a:link {
   text-align: center;
   background-image: url('/static/images/design-bg.png');
   height: 10em;
-}
-
-.intro p:first-child {
-  margin-top: 1.5em;
 }
 
 .flex {
