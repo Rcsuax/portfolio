@@ -17,10 +17,11 @@
         <p>You can view my certifications <b><a href="display">here</a></b></p>
 
       </div>
-        <div class="row flex">
           <% var count = 0; %>
             <% postlist.forEach(function(post) { %>
-                <div class="col-md-4 box" id="id-<%- count %>" style="background-color: <%- post.color %>">
+              <div class="row flex">
+                <div class="col-md-6 box" id="<%- count %>" style="background-color: <%- post.color %>">
+
                     <h1><%= post.title %></h1>
                     <p>
                       <%= post.preview %>
@@ -33,12 +34,14 @@
                     <p class="postbody">
                       <%= post.body %>
                     </p>
-                    <p class="postbody">
-                      <u><a href="<%= post.url %>">View the Source Code here</a></u>
-                    </p>
+                  </div>
+
+
+                <div class="col-md-6 opp-box">
+                  <p><u><a href="<%= post.url %>">View the Source Code here</a></u></p>
+                </div>
                 </div>
               <% count++}); %>
-        </div>
     </div>
 
     <footer>

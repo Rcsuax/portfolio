@@ -64,6 +64,19 @@ a:link {
   transition: 150ms linear;
 }
 
+.opp-box{
+  /*background-image: url();*/
+  transform: scale(1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform-origin: right;
+}
+
+.order{
+  order: 1;
+}
+
 .box:hover {
   filter: brightness(125%);
 }

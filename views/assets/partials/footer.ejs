@@ -15,4 +15,51 @@
     }).fadeOut(0);
   });
 </script>
-<script>runTyping();</script>
+<script type="text/javascript">
+
+  function isEven(num){
+    return (num % 2 == 0);
+  }
+
+  function isMobile(){
+    return (window.innerWidth <= 800);
+
+  }
+
+  function getNumberOfDivs(){
+    var maxVal = 10;
+    var minVal = 0;
+    var ids = []
+    var id = ''
+
+    while(minVal < maxVal){
+      id = document.getElementById(minVal);
+      if(id){
+        ids.push(id)
+      }
+      minVal++;
+    }
+    return ids.length;
+  }
+
+  function orderDivs(){
+    var a = getNumberOfDivs();
+    for (var i =0; i < a;i++){
+      if(!isEven(i) && !isMobile()){
+        document.getElementById(i).classList.add('order')
+      }
+    }
+  }
+
+  function staticMobileType(){
+    var element = document.querySelector('#output');
+    element.innerHTML = "I design responsively";
+  }
+
+  if(!isMobile()){
+    runTyping()
+  }
+  else staticMobileType();
+
+  orderDivs();
+</script>

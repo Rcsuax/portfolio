@@ -4,7 +4,7 @@ function runTyping() {
 		var deleteSpeed = 30; // 30 ms
 		var deleteAfter = 3000; // 3 seconds
 		var items = [
-		  "I am a self taught developer",
+		  "I am self taught",
 		  "I code in Java, Groovy and Javascript",
 		  "I enjoy learning",
 		  "I love designing"
