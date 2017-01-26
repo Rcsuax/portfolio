@@ -19,6 +19,7 @@ router.route('/')
     post.body = req.body.body;
     post.tech = req.body.tech;
     post.url = req.body.url;
+    post.image = req.body.image;
 
     post.save(function(err) {
         if (err) {
@@ -31,7 +32,8 @@ router.route('/')
             tech: req.body.tech,
             body: req.body.body,
             url: req.body.url,
-            date: post.date
+            date: post.date,
+            image: req.body.image
         });
     })
 })

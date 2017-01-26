@@ -7,6 +7,7 @@ var postSchema = new Schema({
   tech: String,
   body:   String,
   url: String,
+  image: String,
   date: { type: Date, default: Date.now }
 });
 
