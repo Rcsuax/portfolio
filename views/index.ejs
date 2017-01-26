@@ -8,40 +8,25 @@
 
 <body>
     <div class="container-fluid">
-      <% include assets/partials/nav %>
+        <% include assets/partials/nav %>
 
-      <div class="row intro">
+        <div class="row intro">
+            <p id='output'></p>
+            <p>You can view my certifications <b><a href="display">here</a></b></p>
+        </div>
 
-        <p id='output'></p>
-
-        <p>You can view my certifications <b><a href="display">here</a></b></p>
-
-      </div>
-          <% var count = 0; %>
+        <% var count = 0; %>
             <% postlist.forEach(function(post) { %>
-              <div class="row flex">
-                <div class="col-md-6 box" id="<%- count %>" style="background-color: <%- post.color %>">
+                <div class="row flex">
+                    <div class="col-md-6 box" id="<%- count %>" style="background-color: <%- post.color %>">
+                        <h1><%= post.title %></h1>
+                        <p><%= post.preview %></p>
+                        <p><u><a href="<%= post.url %>">View the Source Code here</a></u></p>
+                    </div>
 
-                    <h1><%= post.title %></h1>
-                    <p>
-                      <%= post.preview %>
-                    </p>
-                    <h3> Technology Used</h3>
-                    <p class="postbody">
-                      <%= post.tech %>
-                    </p>
-                    <h3>What I would do Better</h3>
-                    <p class="postbody">
-                      <%= post.body %>
-                    </p>
-                  </div>
-
-
-                <div class="col-md-6 opp-box">
-                  <p><u><a href="<%= post.url %>">View the Source Code here</a></u></p>
+                    <div class="col-md-6 opp-box" style="background-image: url(<%- post.image %>)"></div>
                 </div>
-                </div>
-              <% count++}); %>
+        <% count++}); %>
     </div>
 
     <footer>

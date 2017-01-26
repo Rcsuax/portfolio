@@ -30,7 +30,7 @@ a:link {
 }
 
 .title-box h1 {
-  font-size: 3em;
+  font-size: 2.7em;
   text-align: center;
   color: #FFFFFF;
 }
@@ -38,7 +38,7 @@ a:link {
 .title-box p {
     margin-bottom: 0;
     font-size: 1.1em;
-    font-style: italic;
+    font-style: bold;
     color: #FFFFFF;
 }
 
@@ -59,13 +59,23 @@ a:link {
 }
 
 .box {
-  color: white;
   opacity: 1;
   transition: 150ms linear;
 }
+.box h1 {color: white}
+.box p {
+  color: black;
+  line-height: 1;
+}
+.box:hover {
+  filter: brightness(125%);
+}
+
+.box a {
+  color: white;
+}
 
 .opp-box{
-  /*background-image: url();*/
   transform: scale(1);
   background-size: cover;
   background-repeat: no-repeat;
@@ -75,14 +85,6 @@ a:link {
 
 .order{
   order: 1;
-}
-
-.box:hover {
-  filter: brightness(125%);
-}
-
-.box a {
-  color: white;
 }
 
 .active {
