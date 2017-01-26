@@ -1,20 +1,23 @@
 <script>
-  $('.flex div').click(function() {
-    $(this).addClass('active');
-    $(this).find('p').removeClass('postbody');
+// Not sure what to do with this at the moment. Will refactor
 
-
-    $(this).mouseleave(function(){
-      $(this).removeClass('active');
-      $(this).find('p:not(:first)').addClass('postbody');
-      $('.flex div').fadeIn();
-    })
-
-    $('.flex div').filter(function() {
-      return !($(this).is('.active'));
-    }).fadeOut(0);
-  });
+  // $('.flex div').click(function() {
+  //   $(this).addClass('active');
+  //   $(this).find('p').removeClass('postbody');
+  //
+  //
+  //   $(this).mouseleave(function(){
+  //     $(this).removeClass('active');
+  //     $(this).find('p:not(:first)').addClass('postbody');
+  //     $('.flex div').fadeIn();
+  //   })
+  //
+  //   $('.flex div').filter(function() {
+  //     return !($(this).is('.active'));
+  //   }).fadeOut(0);
+  // });
 </script>
+
 <script type="text/javascript">
 
   function isEven(num){
@@ -56,10 +59,24 @@
     element.innerHTML = "I design responsively";
   }
 
-  if(!isMobile()){
-    runTyping()
+  function mobileCss(){
+    var b = document.querySelectorAll('.box')
+    b.forEach(function(f){
+        f.style.width = '100%';
+    })
   }
-  else staticMobileType();
 
-  orderDivs();
+  function init(){
+    if(!isMobile()){
+      runTyping()
+    }
+    else {
+      staticMobileType();
+      mobileCss();
+    }
+    orderDivs();
+  }
+
+
+  init();
 </script>
