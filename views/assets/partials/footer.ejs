@@ -7,7 +7,6 @@
     var hiddenItems = box.find('div p');
 
     box.addClass('active');
-    window.scrollTo(0,0);
     button.fadeIn(0);
     hiddenItems.addClass('display');
     var notActive = $('.box').filter(function() {
@@ -15,7 +14,7 @@
     });
 
     opbox.fadeOut(0);
-    notActive.fadeOut(0);
+    if(!isMobile()){notActive.fadeOut(0);};
 
     button.click(function() {
       $(this).data('clicked', true);
@@ -27,6 +26,7 @@
       notActive.fadeIn(0);
       button.fadeOut(0);
       hiddenItems.removeClass('display');
+      if(isMobile()){mobileCss()};
       button.data('clicked', false);
     }
   });
