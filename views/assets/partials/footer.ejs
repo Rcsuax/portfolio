@@ -1,6 +1,6 @@
 <script>
 /* --------------------- OpenClose Divs ----------------------*/
-  $('.box').click(function() {
+  $('.box').click(function(){
     var box = $(this);
     var button = $(this).find('button');
     var opbox = $('.opp-box');
@@ -9,7 +9,7 @@
     box.addClass('active');
     button.fadeIn(0);
     hiddenItems.addClass('display');
-    var notActive = $('.box').filter(function() {
+    var notActive = $('.box').filter(function(){
       return !($(this).is('.active'));
     });
 
@@ -20,7 +20,7 @@
       $(this).data('clicked', true);
     });
 
-    if(button.data('clicked')) {
+    if(button.data('clicked')){
       box.removeClass('active');
       opbox.fadeIn(0);
       notActive.fadeIn(0);
@@ -55,7 +55,6 @@
 
   function isMobile(){
     return (window.innerWidth <= 800);
-
   }
 
   function getNumberOfDivs(){
