@@ -88,8 +88,12 @@
   }
 
   function mobileCss(){
-    var b = document.querySelectorAll('.box')
-    var ob = document.querySelectorAll('.opp-box')
+    var b = document.querySelectorAll('.box');
+    var ob = document.querySelectorAll('.opp-box');
+    var titleHeading = document.querySelector('.title-box h1');
+
+    titleHeading.style.fontSize = '2.7em'
+
     b.forEach(function(f){
         f.style.width = '100%';
     })
