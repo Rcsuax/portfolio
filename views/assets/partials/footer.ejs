@@ -1,24 +1,53 @@
 <script>
-// Not sure what to do with this at the moment. Will refactor
+/* --------------------- OpenClose Divs ----------------------*/
+  $('.box').click(function() {
+    var box = $(this);
+    var button = $(this).find('button');
+    var opbox = $('.opp-box');
+    var hiddenItems = box.find('div');
 
-  // $('.flex div').click(function() {
-  //   $(this).addClass('active');
-  //   $(this).find('p').removeClass('postbody');
-  //
-  //
-  //   $(this).mouseleave(function(){
-  //     $(this).removeClass('active');
-  //     $(this).find('p:not(:first)').addClass('postbody');
-  //     $('.flex div').fadeIn();
-  //   })
-  //
-  //   $('.flex div').filter(function() {
-  //     return !($(this).is('.active'));
-  //   }).fadeOut(0);
-  // });
-</script>
+    box.addClass('active');
+    window.scrollTo(0,0);
+    button.fadeIn(0);
+    hiddenItems.addClass('display');
+    var notActive = $('.box').filter(function() {
+      return !($(this).is('.active'));
+    });
 
-<script type="text/javascript">
+    opbox.fadeOut(0);
+    notActive.fadeOut(0);
+
+    button.click(function() {
+      $(this).data('clicked', true);
+    });
+
+    if(button.data('clicked')) {
+      box.removeClass('active');
+      opbox.fadeIn(0);
+      notActive.fadeIn(0);
+      button.fadeOut(0);
+      hiddenItems.removeClass('display');
+      button.data('clicked', false);
+    }
+  });
+/* -----------------------------------------------------------*/
+  window.addEventListener('resize', function () {
+    "use strict";
+    if(isMobile()){
+      window.location.reload();
+    }
+  })
+
+  $('.opp-box').each(function(){
+    var _this = this;
+    var fadeinslowview = new Waypoint({
+        element: _this,
+        handler: function (direction) {
+            $(this.element).animate({'opacity': 1},500)
+        },
+        offset: '70%'
+    });
+});
 
   function isEven(num){
     return (num % 2 == 0);
@@ -56,13 +85,18 @@
 
   function staticMobileType(){
     var element = document.querySelector('#output');
-    element.innerHTML = "I design responsively";
+    element.innerHTML = "design, code, create";
   }
 
   function mobileCss(){
     var b = document.querySelectorAll('.box')
+    var ob = document.querySelectorAll('.opp-box')
     b.forEach(function(f){
         f.style.width = '100%';
+    })
+
+    ob.forEach(function(f){
+        f.style.display = 'none';
     })
   }
 
