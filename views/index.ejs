@@ -19,12 +19,14 @@
             <% postlist.forEach(function(post) { %>
                 <div class="row flex">
                     <div class="col-md-6 box" id="<%- count %>" style="background-color: <%- post.color %>">
-                        <button class="exit btn btn-primary">Close</button>
+                        <button class="exit btn btn-danger">Close</button>
                         <h1><%= post.title %></h1>
                         <p><%= post.preview %></p>
-                        <div class="hidden-posts">
-                          <p><%- post.tech %></p>
-                          <p><%- post.body %></p>
+                        <div>
+                          <h3>Technology used:</h3>
+                          <p class="hidden-posts"><%- post.tech %></p>
+                          <h3>What I would do better:</h3>
+                          <p class="hidden-posts"><%- post.body %></p>
                         </div>
                         <p><u><a href="<%= post.url %>">View the Source Code here</a></u></p>
                     </div>

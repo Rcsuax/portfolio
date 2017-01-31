@@ -5,9 +5,9 @@ function runTyping() {
 		var deleteAfter = 3000; // 3 seconds
 		var items = [
 		  "I am self taught",
-		  "I code in Java, Groovy and Javascript",
-		  "I enjoy learning",
-		  "I love designing"
+		  "I use Groovy and Javascript",
+		  "I love learning",
+		  "I enjoy challenges"
 		];
 		/* END SETTINGS */
 
