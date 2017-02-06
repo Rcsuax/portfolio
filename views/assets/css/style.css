@@ -46,7 +46,8 @@ a:link {
 .intro {
   text-align: center;
   background-image: url('/static/images/design-bg.png');
-  padding-top: 2em;
+  padding-top: 5em;
+  padding-bottom: 10em;
   height: 10em;
 }
 
