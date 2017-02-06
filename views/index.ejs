@@ -15,9 +15,11 @@
             <p>You can view my certifications <b><a href="display">here</a></b></p>
         </div>
 
-        <% var count = 0; %>
+
+        <div class="row flex">
+            <% var count = 0; %>
             <% postlist.forEach(function(post) { %>
-                <div class="row flex">
+
                     <div class="col-md-6 box" id="<%- count %>" style="background-color: <%- post.color %>">
                         <button class="exit btn btn-danger">Close</button>
                         <h1><%= post.title %></h1>
@@ -31,11 +33,8 @@
                         <p><u><a href="<%= post.url %>">View the Source Code here</a></u></p>
                     </div>
 
-                    <div class="col-md-6 opp-box" style="background-image: url(<%- post.image %>)">
-                      &nbsp;
-                    </div>
-                </div>
         <% count++}); %>
+        </div>
     </div>
 
     <footer>
